@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Divisas</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Calculadora de Divisas</h1>
+      <form id="formulario-calculo">
+        <div class="grupo-formulario">
+          <label for="cantidad-pesos">Cantidad de Pesos Argentinos:</label>
+          <input type="number" id="cantidad-pesos" name="cantidad-pesos" required />
+        </div>
+        <div class="grupo-formulario">
+          <label for="moneda-extranjera">Moneda Extranjera:</label>
+          <select id="moneda-extranjera" name="moneda-extranjera" required>
+            <option value="" disabled selected>Seleccione una moneda</option>
+            <option value="usd">Dólares</option>
+            <option value="eur">Euros</option>
+          </select>
+        </div>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado"></div>
+      <h2>Agregar Nueva Moneda</h2>
+      <form id="formulario-agregar-moneda">
+        <div class="grupo-formulario">
+          <label for="nombre-moneda">Nombre de la Moneda:</label>
+          <input type="text" id="nombre-moneda" name="nombre-moneda" required />
+        </div>
+        <div class="grupo-formulario">
+          <label for="costo-conversion">Costo de Conversión (en pesos):</label>
+          <input type="number" id="costo-conversion" name="costo-conversion" required />
+        </div>
+        <button type="submit">Agregar Moneda</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
